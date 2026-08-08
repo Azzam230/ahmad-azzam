@@ -1,6 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
+import { BookingTrigger } from "@/components/booking-trigger";
 import { cn } from "@/lib/utils";
 
 const STATS = [
@@ -32,15 +33,9 @@ export function Hero() {
 
           <div className="mt-10 flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-white p-5 shadow-card sm:flex-row sm:items-center sm:justify-between sm:p-6">
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a
-                href="mailto:book@example.com?subject=طلب%20حجز%20جلسة%20استراتيجية"
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "no-underline"
-                )}
-              >
+              <BookingTrigger size="lg">
                 احجز جلسة استراتيجية
-              </a>
+              </BookingTrigger>
               <a
                 href="#audit"
                 className={cn(

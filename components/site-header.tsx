@@ -1,10 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { BookingTrigger } from "@/components/booking-trigger";
 
 const NAV_LINKS = [
   { label: "المنظومة", href: "#systems" },
@@ -44,12 +43,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href="mailto:book@example.com?subject=طلب%20حجز%20استشارة"
-            className="hidden h-11 items-center rounded-xl bg-emerald-600 px-6 text-sm font-bold text-white shadow-subtle transition-all duration-300 ease-in-out hover:bg-emerald-700 hover:shadow-none md:inline-flex"
-          >
+          <BookingTrigger className="hidden md:inline-flex">
             احجز استشارة
-          </a>
+          </BookingTrigger>
           <Button
             variant="ghost"
             size="icon"
@@ -75,12 +71,9 @@ export function SiteHeader() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="mailto:book@example.com?subject=طلب%20حجز%20استشارة"
-              className="mt-3 inline-flex h-11 items-center justify-center rounded-xl bg-emerald-600 px-6 text-sm font-bold text-white"
-            >
+            <BookingTrigger className="mt-3 w-full">
               احجز استشارة
-            </a>
+            </BookingTrigger>
           </div>
         </nav>
       )}

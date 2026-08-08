@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { BookingTrigger } from "@/components/booking-trigger";
 import { cn } from "@/lib/utils";
 
 type GoalId = "sales" | "conversion" | "automation";
@@ -361,12 +362,9 @@ export function GrowthAudit() {
                     . ننصح بالبدء منها ثم بناء بقية المنظومة حولها.
                   </p>
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                    <a
-                      href={`mailto:book@example.com?subject=جلسة%20استراتيجية%20عميقة%20—%20مؤشر%20${analysis.score}%2F100`}
-                      className="inline-flex h-12 items-center justify-center rounded-xl bg-emerald-600 px-8 text-sm font-bold text-white shadow-subtle transition-all duration-300 ease-in-out hover:bg-emerald-600 hover:shadow-none"
-                    >
+                    <BookingTrigger size="lg">
                       احجز جلسة استراتيجية عميقة
-                    </a>
+                    </BookingTrigger>
                     <Button
                       variant="ghost"
                       onClick={reset}
