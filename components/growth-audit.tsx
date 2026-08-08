@@ -146,7 +146,7 @@ export function GrowthAudit() {
 
         <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <h2 className="text-balance text-3xl font-black leading-tight tracking-tighter sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="text-balance font-display text-3xl font-black leading-tight tracking-tighter sm:text-4xl lg:text-[2.75rem]">
               فحص مجاني لمؤشر نمو موقعك
             </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-zinc-300">
@@ -202,7 +202,7 @@ export function GrowthAudit() {
               <p className="text-xs font-bold text-zinc-500">
                 الخطوة {step + 1} من 3 — {STEPS[step].label}
               </p>
-              <h3 className="mt-2 text-2xl font-black tracking-tight">
+              <h3 className="mt-2 font-display text-2xl font-black tracking-tight">
                 {STEPS[step].title}
               </h3>
 
@@ -336,7 +336,7 @@ export function GrowthAudit() {
                     مؤشر جاهزية منظومتك الرقمية
                   </p>
                   <div className="mt-4 flex items-end gap-2">
-                    <span className="text-7xl font-black tracking-tighter text-white lg:text-8xl">
+                    <span className="font-display text-7xl font-black tracking-tighter text-white lg:text-8xl">
                       {analysis.score}
                     </span>
                     <span className="mb-3 text-lg font-bold text-white/40">

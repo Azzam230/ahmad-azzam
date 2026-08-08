@@ -27,7 +27,7 @@ export function Manifesto() {
           <span className="text-sm font-black text-white/25">02</span>
         </div>
 
-        <h2 className="mt-6 max-w-4xl text-balance text-3xl font-black leading-snug tracking-tighter sm:text-4xl lg:text-5xl">
+        <h2 className="mt-6 max-w-4xl text-balance font-display text-3xl font-black leading-snug tracking-tighter sm:text-4xl lg:text-5xl">
           نموّ حقيقي لا يصنعه وعدٌ، بل{" "}
           <span className="text-emerald-400">منظومة رقمية تفي</span>.
         </h2>

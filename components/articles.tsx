@@ -58,10 +58,10 @@ export function Articles() {
               <Badge variant="emerald" className="self-start">
                 {article.category}
               </Badge>
-              <h3 className="mt-6 text-xl font-black leading-snug text-ink transition-colors group-hover:text-emerald-800">
+              <h3 className="mt-6 font-display text-xl font-black leading-snug text-ink transition-colors group-hover:text-emerald-800">
                 {article.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-500">
+              <p className="mt-3 font-serif text-sm leading-relaxed text-zinc-500">
                 {article.excerpt}
               </p>
               <div className="mt-8 flex items-center justify-between border-t border-zinc-200 pt-4">

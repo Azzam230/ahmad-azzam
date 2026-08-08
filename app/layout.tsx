@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { fontPrimary } from "@/app/fonts";
+import { fontDisplay, fontSans, fontSerif } from "@/app/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -30,7 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={fontPrimary.variable}>
+    <html
+      lang="ar"
+      dir="rtl"
+      className={`${fontSans.variable} ${fontDisplay.variable} ${fontSerif.variable}`}
+    >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         {children}
       </body>

@@ -44,7 +44,7 @@ export function SectionHeading({
       </div>
       <h2
         className={cn(
-          "mt-3 max-w-3xl text-3xl font-black leading-tight tracking-tighter text-balance sm:text-4xl lg:text-[2.75rem]",
+          "mt-3 max-w-3xl font-display text-3xl font-black leading-tight tracking-tighter text-balance sm:text-4xl lg:text-[2.75rem]",
           dark ? "text-white" : "text-ink"
         )}
       >

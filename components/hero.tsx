@@ -19,7 +19,7 @@ export function Hero() {
             والأنظمة الذكية
           </Badge>
 
-          <h1 className="mt-7 text-balance text-4xl font-black leading-[1.2] tracking-tighter text-ink sm:text-5xl lg:text-[3.5rem] lg:leading-[1.15]">
+          <h1 className="mt-7 text-balance font-display text-4xl font-black leading-[1.2] tracking-tighter text-ink sm:text-5xl lg:text-[3.5rem] lg:leading-[1.15]">
             نحوّل التسويق، التقنية، والذكاء الاصطناعي إلى{" "}
             <span className="text-emerald-700">محرك نمو أوتوماتيكي</span>{" "}
             للشركات.
@@ -77,7 +77,7 @@ export function Hero() {
                   <dt className="text-sm font-medium text-zinc-600">
                     {stat.label}
                   </dt>
-                  <dd className="text-xl font-black tracking-tighter text-ink">
+                  <dd className="font-display text-xl font-black tracking-tighter text-ink">
                     {stat.value}
                   </dd>
                 </div>

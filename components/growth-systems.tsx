@@ -56,7 +56,7 @@ export function GrowthSystems() {
                 <system.icon className="h-5 w-5 text-emerald-700" />
               </div>
 
-              <h3 className="mt-10 text-lg font-black leading-snug text-ink">
+              <h3 className="mt-10 font-display text-lg font-black leading-snug text-ink">
                 {system.title}
               </h3>
               <p className="mt-1 text-[11px] font-bold uppercase tracking-wider text-zinc-400">
