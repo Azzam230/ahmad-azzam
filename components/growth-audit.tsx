@@ -141,12 +141,12 @@ export function GrowthAudit() {
           <p className="text-xs font-bold text-emerald-400">
             أداة تقييم الجاهزية الرقمية
           </p>
-          <span className="text-sm font-black text-white/25">05</span>
+          <span className="text-sm font-bold text-white/25">05</span>
         </div>
 
         <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <h2 className="text-balance font-display text-3xl font-black leading-tight tracking-tighter sm:text-4xl lg:text-[2.75rem]">
+            <h2 className="text-balance font-display text-3xl font-bold leading-tight tracking-tighter sm:text-4xl lg:text-[2.75rem]">
               فحص مجاني لمؤشر نمو موقعك
             </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-zinc-300">
@@ -159,8 +159,8 @@ export function GrowthAudit() {
           </p>
         </div>
 
-        <div className="mt-12 border border-white/15 bg-[#0B0B0E]">
-          <div className="flex items-center border-b border-white/10">
+        <div className="mt-12 overflow-hidden rounded-2xl border border-zinc-800 bg-[#111113]">
+          <div className="flex items-center border-b border-zinc-800">
             {[...STEPS, { label: "النتيجة" }].map((s, i) => {
               const active = showResult ? i === 3 : i === step;
               const done = showResult ? i < 3 : i < step;
@@ -168,15 +168,15 @@ export function GrowthAudit() {
                 <div
                   key={s.label}
                   className={cn(
-                    "flex flex-1 items-center gap-3 border-e border-white/10 px-4 py-4 last:border-e-0",
-                    active && "bg-emerald-700"
+                    "flex flex-1 items-center gap-3 border-e border-zinc-800 px-4 py-4 last:border-e-0",
+                    active && "bg-emerald-600"
                   )}
                 >
                   <span
                     className={cn(
-                      "flex h-6 w-6 shrink-0 items-center justify-center text-xs font-black",
+                      "flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold",
                       done
-                        ? "bg-emerald-700 text-white"
+                        ? "bg-emerald-600 text-white"
                         : active
                           ? "bg-white/20 text-white"
                           : "border border-white/20 text-white/40"
@@ -202,21 +202,21 @@ export function GrowthAudit() {
               <p className="text-xs font-bold text-zinc-500">
                 الخطوة {step + 1} من 3 — {STEPS[step].label}
               </p>
-              <h3 className="mt-2 font-display text-2xl font-black tracking-tight">
+              <h3 className="mt-2 font-display text-2xl font-bold tracking-tight">
                 {STEPS[step].title}
               </h3>
 
               {step === 0 && (
-                <div className="mt-8 grid gap-px border border-white/15 bg-white/15 sm:grid-cols-3">
+                <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-zinc-800 bg-zinc-800 sm:grid-cols-3">
                   {GOALS.map((g) => (
                     <button
                       key={g.id}
                       type="button"
                       onClick={() => setGoal(g.id)}
                       className={cn(
-                        "flex flex-col items-start gap-4 bg-[#0B0B0E] p-5 text-start transition-colors",
+                        "flex flex-col items-start gap-4 bg-[#111113] p-5 text-start transition-all duration-300 ease-in-out",
                         goal === g.id &&
-                          "bg-emerald-700 hover:bg-emerald-700"
+                          "bg-emerald-600 hover:bg-emerald-600"
                       )}
                     >
                       <g.icon
@@ -253,22 +253,22 @@ export function GrowthAudit() {
                       placeholder="https://example.com"
                       value={url}
                       onChange={(e) => setUrl(e.target.value)}
-                      className="mt-2 border-white/20 bg-[#0B0B0E] text-white placeholder:text-white/30 focus-visible:border-emerald-500 focus-visible:ring-emerald-500/20"
+                      className="mt-2 border-white/20 bg-[#111113] text-white placeholder:text-white/30 focus-visible:border-emerald-500 focus-visible:ring-emerald-500/20"
                     />
                   </div>
                   <div>
                     <p className="text-sm font-bold text-zinc-300">
                       حجم الزيارات الشهرية
                     </p>
-                    <div className="mt-2 grid gap-px border border-white/15 bg-white/15 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="mt-2 grid gap-px overflow-hidden rounded-xl border border-zinc-800 bg-zinc-800 sm:grid-cols-2 lg:grid-cols-4">
                       {TRAFFIC.map((t) => (
                         <button
                           key={t.id}
                           type="button"
                           onClick={() => setTraffic(t.id)}
                           className={cn(
-                            "flex flex-col items-start gap-1 bg-[#0B0B0E] px-4 py-4 text-start transition-colors",
-                            traffic === t.id && "bg-emerald-700"
+                            "flex flex-col items-start gap-1 bg-[#111113] px-4 py-4 text-start transition-all duration-300 ease-in-out",
+                            traffic === t.id && "bg-emerald-600"
                           )}
                         >
                           <span className="text-sm font-bold text-white">
@@ -285,15 +285,15 @@ export function GrowthAudit() {
               )}
 
               {step === 2 && (
-                <div className="mt-8 grid gap-px border border-white/15 bg-white/15 sm:grid-cols-2">
+                <div className="mt-8 grid gap-px overflow-hidden rounded-xl border border-zinc-800 bg-zinc-800 sm:grid-cols-2">
                   {BOTTLENECKS.map((b) => (
                     <button
                       key={b.id}
                       type="button"
                       onClick={() => setBottleneck(b.id)}
                       className={cn(
-                        "flex flex-col items-start gap-2 bg-[#0B0B0E] px-5 py-5 text-start transition-colors",
-                        bottleneck === b.id && "bg-emerald-700"
+                        "flex flex-col items-start gap-2 bg-[#111113] px-5 py-5 text-start transition-all duration-300 ease-in-out",
+                        bottleneck === b.id && "bg-emerald-600"
                       )}
                     >
                       <span className="text-base font-bold text-white">
@@ -307,7 +307,7 @@ export function GrowthAudit() {
                 </div>
               )}
 
-              <div className="mt-10 flex items-center justify-between border-t border-white/10 pt-6">
+              <div className="mt-10 flex items-center justify-between border-t border-zinc-800 pt-6">
                 <Button
                   variant="ghost"
                   onClick={() => setStep((s) => Math.max(0, s - 1))}
@@ -336,7 +336,7 @@ export function GrowthAudit() {
                     مؤشر جاهزية منظومتك الرقمية
                   </p>
                   <div className="mt-4 flex items-end gap-2">
-                    <span className="font-display text-7xl font-black tracking-tighter text-white lg:text-8xl">
+                    <span className="font-display text-7xl font-bold tracking-tighter text-white lg:text-8xl">
                       {analysis.score}
                     </span>
                     <span className="mb-3 text-lg font-bold text-white/40">
@@ -353,7 +353,7 @@ export function GrowthAudit() {
                       }
                     />
                   </div>
-                  <p className="mt-6 border-t border-white/10 pt-5 text-sm leading-relaxed text-zinc-300">
+                  <p className="mt-6 border-t border-zinc-800 pt-5 text-sm leading-relaxed text-zinc-300">
                     أبرز نقطة قصور لديك:{" "}
                     <span className="font-bold text-white">
                       {analysis.weakest.label}
@@ -363,7 +363,7 @@ export function GrowthAudit() {
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <a
                       href={`mailto:book@example.com?subject=جلسة%20استراتيجية%20عميقة%20—%20مؤشر%20${analysis.score}%2F100`}
-                      className="inline-flex h-12 items-center justify-center bg-emerald-700 px-8 text-sm font-bold text-white transition-colors hover:bg-emerald-600"
+                      className="inline-flex h-12 items-center justify-center rounded-xl bg-emerald-600 px-8 text-sm font-bold text-white shadow-subtle transition-all duration-300 ease-in-out hover:bg-emerald-600 hover:shadow-none"
                     >
                       احجز جلسة استراتيجية عميقة
                     </a>
@@ -379,14 +379,14 @@ export function GrowthAudit() {
                 </div>
 
                 <div className="lg:col-span-7">
-                  <div className="flex h-full flex-col justify-center gap-6 border-t border-white/10 pt-8 lg:border-e lg:border-t-0 lg:pe-8 lg:pt-0">
+                  <div className="flex h-full flex-col justify-center gap-6 border-t border-zinc-800 pt-8 lg:border-e lg:border-t-0 lg:pe-8 lg:pt-0">
                     {analysis.bars.map((bar, index) => (
                       <div key={bar.label}>
                         <div className="flex items-center justify-between">
                           <span className="text-sm font-bold text-zinc-200">
                             {bar.label}
                           </span>
-                          <span className="text-sm font-black text-white">
+                          <span className="text-sm font-bold text-white">
                             {bar.value}
                             <span className="text-white/40">%</span>
                           </span>

@@ -30,7 +30,7 @@ export function Articles() {
   return (
     <section
       id="articles"
-      className="scroll-mt-16 border-b border-zinc-200 bg-white"
+      className="scroll-mt-16 border-b border-zinc-200"
     >
       <div className="container py-20 lg:py-28">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -42,23 +42,23 @@ export function Articles() {
           />
           <a
             href="mailto:editor@example.com"
-            className="inline-flex shrink-0 items-center gap-1.5 text-sm font-bold text-zinc-500 transition-colors hover:text-emerald-700"
+            className="inline-flex shrink-0 items-center gap-1.5 text-sm font-bold text-zinc-500 transition-all duration-300 ease-in-out hover:text-emerald-600"
           >
             جميع المقالات
             <ArrowLeft className="h-4 w-4 rtl:rotate-0 ltr:rotate-180" />
           </a>
         </div>
 
-        <div className="mt-12 grid gap-px border border-zinc-200 bg-zinc-200 md:grid-cols-3">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-200 shadow-card md:grid-cols-3">
           {ARTICLES.map((article) => (
             <article
               key={article.title}
-              className="group flex flex-col bg-white p-6 transition-colors hover:bg-emerald-50/40 lg:p-8"
+              className="group flex flex-col bg-white p-6 transition-all duration-300 ease-in-out hover:bg-emerald-50/60 lg:p-8"
             >
               <Badge variant="emerald" className="self-start">
                 {article.category}
               </Badge>
-              <h3 className="mt-6 font-display text-xl font-black leading-snug text-ink transition-colors group-hover:text-emerald-800">
+              <h3 className="mt-6 font-display text-xl font-bold leading-snug text-ink transition-all duration-300 ease-in-out group-hover:text-emerald-600">
                 {article.title}
               </h3>
               <p className="mt-3 font-serif text-sm leading-relaxed text-zinc-500">
@@ -68,7 +68,7 @@ export function Articles() {
                 <span className="text-xs font-medium text-zinc-400">
                   {article.readTime}
                 </span>
-                <span className="text-xs font-bold text-zinc-300 transition-colors group-hover:text-emerald-700">
+                <span className="text-xs font-bold text-zinc-300 transition-all duration-300 ease-in-out group-hover:text-emerald-600">
                   اقرأ المقال
                 </span>
               </div>

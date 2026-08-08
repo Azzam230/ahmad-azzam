@@ -17,14 +17,14 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/85 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-background/85 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between gap-4">
         <a href="#top" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center bg-ink text-sm font-black text-white">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-ink text-sm font-bold text-white">
             ن
           </span>
           <span className="flex flex-col leading-none">
-            <span className="text-sm font-black text-ink">أحمد عزام</span>
+            <span className="text-sm font-bold text-ink">أحمد عزام</span>
             <span className="mt-1 text-[11px] font-medium text-zinc-500">
               نمو رقمي وأنظمة ذكية
             </span>
@@ -36,7 +36,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-950"
+              className="text-sm font-medium text-zinc-600 transition-all duration-300 ease-in-out hover:text-zinc-950"
             >
               {link.label}
             </a>
@@ -46,7 +46,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <a
             href="mailto:book@example.com?subject=طلب%20حجز%20استشارة"
-            className="hidden h-11 items-center bg-emerald-700 px-6 text-sm font-bold text-white transition-colors hover:bg-emerald-800 md:inline-flex"
+            className="hidden h-11 items-center rounded-xl bg-emerald-600 px-6 text-sm font-bold text-white shadow-subtle transition-all duration-300 ease-in-out hover:bg-emerald-700 hover:shadow-none md:inline-flex"
           >
             احجز استشارة
           </a>
@@ -77,7 +77,7 @@ export function SiteHeader() {
             ))}
             <a
               href="mailto:book@example.com?subject=طلب%20حجز%20استشارة"
-              className="mt-3 inline-flex h-11 items-center justify-center bg-emerald-700 px-6 text-sm font-bold text-white"
+              className="mt-3 inline-flex h-11 items-center justify-center rounded-xl bg-emerald-600 px-6 text-sm font-bold text-white"
             >
               احجز استشارة
             </a>

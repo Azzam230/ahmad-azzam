@@ -47,7 +47,7 @@ const config: Config = {
           foreground: "hsl(var(--accent-foreground))",
         },
         ink: {
-          DEFAULT: "#09090B",
+          DEFAULT: "#111113",
           soft: "#18181B",
         },
         card: {
@@ -68,6 +68,10 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        subtle: "0 1px 2px 0 rgb(24 24 27 / 0.05)",
+        card: "0 1px 3px 0 rgb(24 24 27 / 0.06), 0 1px 2px -1px rgb(24 24 27 / 0.06)",
       },
       letterSpacing: {
         tighter: "-0.05em",

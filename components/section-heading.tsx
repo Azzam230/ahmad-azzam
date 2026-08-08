@@ -26,7 +26,7 @@ export function SectionHeading({
         <p
           className={cn(
             "text-xs font-bold",
-            dark ? "text-emerald-400" : "text-emerald-700"
+            dark ? "text-emerald-400" : "text-emerald-600"
           )}
         >
           {kicker}
@@ -34,7 +34,7 @@ export function SectionHeading({
         {index && (
           <span
             className={cn(
-              "text-sm font-black",
+              "text-sm font-bold",
               dark ? "text-white/25" : "text-zinc-300"
             )}
           >
@@ -44,7 +44,7 @@ export function SectionHeading({
       </div>
       <h2
         className={cn(
-          "mt-3 max-w-3xl font-display text-3xl font-black leading-tight tracking-tighter text-balance sm:text-4xl lg:text-[2.75rem]",
+          "mt-3 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tighter text-balance sm:text-4xl lg:text-[2.75rem]",
           dark ? "text-white" : "text-ink"
         )}
       >

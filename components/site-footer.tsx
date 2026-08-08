@@ -22,11 +22,11 @@ export function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <a href="#top" className="flex items-center gap-3">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center bg-ink text-sm font-black text-white">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-ink text-sm font-bold text-white">
                 ن
               </span>
               <span className="flex flex-col leading-none">
-                <span className="text-sm font-black text-ink">أحمد عزام</span>
+                <span className="text-sm font-bold text-ink">أحمد عزام</span>
                 <span className="mt-1 text-[11px] font-medium text-zinc-500">
                   نمو رقمي وأنظمة ذكية
                 </span>
@@ -45,7 +45,7 @@ export function SiteFooter() {
                   target={s.href.startsWith("http") ? "_blank" : undefined}
                   rel={s.href.startsWith("http") ? "noreferrer" : undefined}
                   aria-label={s.label}
-                  className="flex h-10 w-10 items-center justify-center border border-zinc-200 text-zinc-600 transition-colors hover:border-emerald-700 hover:text-emerald-700"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 text-zinc-600 transition-all duration-300 ease-in-out hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-600"
                 >
                   <s.icon className="h-4 w-4" />
                 </a>
@@ -60,7 +60,7 @@ export function SiteFooter() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm font-medium text-zinc-700 transition-colors hover:text-emerald-700"
+                    className="text-sm font-medium text-zinc-700 transition-all duration-300 ease-in-out hover:text-emerald-600"
                   >
                     {link.label}
                   </a>
@@ -77,13 +77,13 @@ export function SiteFooter() {
             <div className="mt-5 flex flex-col gap-3">
               <a
                 href="mailto:hello@example.com"
-                className="text-sm font-bold text-emerald-700 underline-offset-4 hover:underline"
+                className="text-sm font-bold text-emerald-600 underline-offset-4 hover:text-emerald-700 hover:underline"
               >
                 hello@example.com
               </a>
               <a
                 href="#audit"
-                className="inline-flex h-11 items-center justify-center border border-zinc-300 bg-white px-6 text-sm font-bold text-ink transition-colors hover:bg-zinc-50"
+                className="inline-flex h-11 items-center justify-center rounded-xl border border-zinc-200 bg-white px-6 text-sm font-bold text-ink shadow-subtle transition-all duration-300 ease-in-out hover:bg-zinc-50"
               >
                 فحص مؤشر النمو — مجاني
               </a>

@@ -43,20 +43,22 @@ export function GrowthSystems() {
           description="لا يعمل أي ركن بمعزل عن الآخر؛ المنظومة متكاملة تبدأ من الاستراتيجية وتنتهي بالأتمتة."
         />
 
-        <div className="mt-12 grid gap-px border border-zinc-200 bg-zinc-200 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-200 shadow-card sm:grid-cols-2 lg:grid-cols-4">
           {SYSTEMS.map((system, index) => (
             <article
               key={system.title}
-              className="group flex flex-col bg-white p-6 transition-colors hover:bg-emerald-50/40 lg:p-8"
+              className="group flex flex-col bg-white p-6 transition-all duration-300 ease-in-out hover:bg-emerald-50/60 lg:p-8"
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-black tracking-widest text-zinc-300">
+                <span className="text-xs font-bold tracking-widest text-zinc-300">
                   0{index + 1}
                 </span>
-                <system.icon className="h-5 w-5 text-emerald-700" />
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 transition-all duration-300 ease-in-out group-hover:bg-emerald-600 group-hover:text-white">
+                  <system.icon className="h-5 w-5" />
+                </span>
               </div>
 
-              <h3 className="mt-10 font-display text-lg font-black leading-snug text-ink">
+              <h3 className="mt-10 font-display text-lg font-bold leading-snug text-ink">
                 {system.title}
               </h3>
               <p className="mt-1 text-[11px] font-bold uppercase tracking-wider text-zinc-400">
@@ -68,7 +70,7 @@ export function GrowthSystems() {
 
               <a
                 href="#audit"
-                className="mt-8 inline-flex items-center gap-1.5 border-t border-zinc-200 pt-4 text-xs font-bold text-zinc-400 transition-colors group-hover:text-emerald-700"
+                className="mt-8 inline-flex items-center gap-1.5 border-t border-zinc-200 pt-4 text-xs font-bold text-zinc-400 transition-all duration-300 ease-in-out group-hover:text-emerald-600"
               >
                 قِس جاهزية هذا الركن
               </a>
