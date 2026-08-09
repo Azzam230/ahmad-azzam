@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { fontDisplay, fontSans, fontSerif } from "@/app/fonts";
 import { BookingProvider } from "@/components/booking-provider";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "مستشار النمو الرقمي والأنظمة الذكية",
   description:
     "نحوّل التسويق، التقنية، والذكاء الاصطناعي إلى محرك نمو أوتوماتيكي للشركات. استشارات استراتيجية، تحويل أعلى، وتصدر محركات البحث والـ AI.",

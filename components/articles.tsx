@@ -1,36 +1,15 @@
 "use client";
 
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/section-heading";
 import { cardMotionProps } from "@/components/motion";
-
-const ARTICLES = [
-  {
-    category: "الظهور في الذكاء الاصطناعي",
-    title: "لماذا لا ينافس موقعك داخل ChatGPT؟",
-    excerpt:
-      "دليل عملي لنظام GEO: كيف تجعل محركات الذكاء الاصطناعي تختار علامتك التجارية جواباً لعملائك.",
-    readTime: "قراءة 8 دقائق",
-  },
-  {
-    category: "تحسين التحويل",
-    title: "من 1% إلى 4%: ما الذي تغيّر فعلاً؟",
-    excerpt:
-      "تفكيك حقيقي لمسار مبيعات أعدناه هندسياً: العناصر التي رفعت التحويل والعناصر التي تجاهلها الجميع.",
-    readTime: "قراءة 6 دقائق",
-  },
-  {
-    category: "أتمتة المبيعات",
-    title: "أتمتة المبيعات بالذكاء الاصطناعي في 90 يوماً",
-    excerpt:
-      "خريطة طريق على ثلاث مراحل لربط CRM ورسائل المتابعة والذكاء الاصطناعي في دورة بيع واحدة.",
-    readTime: "قراءة 10 دقائق",
-  },
-];
+import { getAllArticles } from "@/content/articles";
 
 export function Articles() {
+  const articles = getAllArticles();
+
   return (
     <section
       id="articles"
@@ -45,7 +24,7 @@ export function Articles() {
             description="كتابات عملية مبنية على مشاريع حقيقية، بلغة واضحة بلا فذلكة تسويقية."
           />
           <a
-            href="mailto:editor@example.com"
+            href="/blog"
             className="inline-flex shrink-0 items-center gap-1.5 text-sm font-bold text-zinc-500 transition-all duration-300 ease-in-out hover:text-emerald-600"
           >
             جميع المقالات
@@ -54,9 +33,9 @@ export function Articles() {
         </div>
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-200 shadow-card md:grid-cols-3">
-          {ARTICLES.map((article) => (
+          {articles.map((article) => (
             <motion.article
-              key={article.title}
+              key={article.slug}
               {...cardMotionProps}
               className="group flex flex-col bg-white p-6 transition-colors duration-300 ease-in-out hover:bg-emerald-50/60 lg:p-8"
             >
@@ -64,18 +43,22 @@ export function Articles() {
                 {article.category}
               </Badge>
               <h3 className="mt-6 font-display text-xl font-semibold leading-snug text-ink transition-colors duration-300 ease-in-out group-hover:text-emerald-600">
-                {article.title}
+                <a href={`/blog/${article.slug}`}>{article.title}</a>
               </h3>
               <p className="mt-3 font-serif text-sm font-light leading-relaxed text-zinc-500">
-                {article.excerpt}
+                {article.description}
               </p>
               <div className="mt-8 flex items-center justify-between border-t border-zinc-200 pt-4">
-                <span className="text-xs font-medium text-zinc-400">
-                  {article.readTime}
+                <span className="flex items-center gap-1.5 text-xs font-medium text-zinc-400">
+                  <Clock className="h-3.5 w-3.5" />
+                  {article.readMinutes} دقائق قراءة
                 </span>
-                <span className="text-xs font-semibold text-zinc-300 transition-colors duration-300 ease-in-out group-hover:text-emerald-600">
+                <a
+                  href={`/blog/${article.slug}`}
+                  className="text-xs font-semibold text-zinc-300 transition-colors duration-300 ease-in-out group-hover:text-emerald-600"
+                >
                   اقرأ المقال
-                </span>
+                </a>
               </div>
             </motion.article>
           ))}

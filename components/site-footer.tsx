@@ -1,10 +1,10 @@
 import { AtSign, Briefcase, Mail } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "المنظومة", href: "#systems" },
-  { label: "فلسفة العمل", href: "#philosophy" },
-  { label: "أداة النمو", href: "#audit" },
-  { label: "مقالات", href: "#articles" },
+  { label: "المنظومة", href: "/#systems" },
+  { label: "فلسفة العمل", href: "/#philosophy" },
+  { label: "أداة النمو", href: "/#audit" },
+  { label: "مقالات", href: "/blog" },
 ];
 
 const SOCIAL = [

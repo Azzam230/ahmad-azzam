@@ -36,3 +36,5 @@ next-env.d.ts
 
 # desktop font sources (woff2 only for web)
 *.otf
+# exception: OG image rendering requires an OTF (Satori doesn't support woff2)
+!app/thmanyah typeface/thmanyahserifdisplay/otf/thmanyahserifdisplay-Black.otf

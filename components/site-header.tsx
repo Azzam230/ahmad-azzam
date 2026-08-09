@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/button";
 import { BookingTrigger } from "@/components/booking-trigger";
 
 const NAV_LINKS = [
-  { label: "المنظومة", href: "#systems" },
-  { label: "فلسفة العمل", href: "#philosophy" },
-  { label: "أداة النمو", href: "#audit" },
-  { label: "مقالات", href: "#articles" },
+  { label: "المنظومة", href: "/#systems" },
+  { label: "فلسفة العمل", href: "/#philosophy" },
+  { label: "أداة النمو", href: "/#audit" },
+  { label: "مقالات", href: "/blog" },
 ];
 
 export function SiteHeader() {
