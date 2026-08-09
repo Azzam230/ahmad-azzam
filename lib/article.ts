@@ -9,7 +9,13 @@ export type ArticleBlock =
   | { type: "callout"; title?: string; text: string }
   | { type: "table"; caption?: string; headers: string[]; rows: string[][] }
   | { type: "faq"; items: { q: string; a: string }[] }
-  | { type: "cta"; title: string; text?: string };
+  | {
+      type: "cta";
+      title: string;
+      text?: string;
+      mode?: "booking" | "whatsapp";
+      whatsappLabel?: string;
+    };
 
 export interface Article {
   slug: string;

@@ -94,7 +94,15 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
           case "faq":
             return <Faq key={index} items={block.items} />;
           case "cta":
-            return <CtaCard key={index} title={block.title} text={block.text} />;
+            return (
+              <CtaCard
+                key={index}
+                title={block.title}
+                text={block.text}
+                mode={block.mode}
+                whatsappLabel={block.whatsappLabel}
+              />
+            );
           default:
             return null;
         }
