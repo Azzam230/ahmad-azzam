@@ -1,5 +1,9 @@
+"use client";
+
 import { Bot, MousePointerClick, TrendingUp, Filter } from "lucide-react";
+import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/section-heading";
+import { cardMotionProps } from "@/components/motion";
 
 const SYSTEMS = [
   {
@@ -45,12 +49,13 @@ export function GrowthSystems() {
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-200 shadow-card sm:grid-cols-2 lg:grid-cols-4">
           {SYSTEMS.map((system, index) => (
-            <article
+            <motion.article
               key={system.title}
-              className="group flex flex-col bg-white p-6 transition-all duration-300 ease-in-out hover:bg-emerald-50/60 lg:p-8"
+              {...cardMotionProps}
+              className="group flex flex-col bg-white p-6 transition-colors duration-300 ease-in-out hover:bg-emerald-50/60 lg:p-8"
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold tracking-widest text-zinc-300">
+                <span className="text-xs font-light tracking-widest text-zinc-300">
                   0{index + 1}
                 </span>
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 transition-all duration-300 ease-in-out group-hover:bg-emerald-600 group-hover:text-white">
@@ -58,23 +63,23 @@ export function GrowthSystems() {
                 </span>
               </div>
 
-              <h3 className="mt-10 font-display text-lg font-bold leading-snug text-ink">
+              <h3 className="mt-10 font-display text-lg font-semibold leading-snug text-ink">
                 {system.title}
               </h3>
-              <p className="mt-1 text-[11px] font-bold uppercase tracking-wider text-zinc-400">
+              <p className="mt-1 text-[11px] font-light uppercase tracking-wider text-zinc-400">
                 {system.subtitle}
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-zinc-500">
+              <p className="mt-4 text-sm font-normal leading-relaxed text-zinc-500">
                 {system.description}
               </p>
 
               <a
                 href="#audit"
-                className="mt-8 inline-flex items-center gap-1.5 border-t border-zinc-200 pt-4 text-xs font-bold text-zinc-400 transition-all duration-300 ease-in-out group-hover:text-emerald-600"
+                className="mt-8 inline-flex items-center gap-1.5 border-t border-zinc-200 pt-4 text-xs font-semibold text-zinc-400 transition-all duration-300 ease-in-out group-hover:text-emerald-600"
               >
                 قِس جاهزية هذا الركن
               </a>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

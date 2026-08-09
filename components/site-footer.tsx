@@ -32,7 +32,7 @@ export function SiteFooter() {
                 </span>
               </span>
             </a>
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-zinc-500">
+            <p className="mt-6 max-w-sm text-sm font-light leading-relaxed text-zinc-500">
               استشارات استراتيجية في النمو الرقمي، تحسين التحويل، التصدر في
               محركات البحث والذكاء الاصطناعي، وأتمتة العمليات — منظومة واحدة
               تخدم المبيعات مباشرة.
@@ -54,7 +54,7 @@ export function SiteFooter() {
           </div>
 
           <div className="md:col-span-3">
-            <p className="text-xs font-bold text-zinc-400">أقسام الموقع</p>
+            <p className="text-xs font-semibold text-zinc-400">أقسام الموقع</p>
             <ul className="mt-4 space-y-3">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -70,8 +70,8 @@ export function SiteFooter() {
           </div>
 
           <div className="md:col-span-4">
-            <p className="text-xs font-bold text-zinc-400">ابدأ الآن</p>
-            <p className="mt-4 text-sm leading-relaxed text-zinc-500">
+            <p className="text-xs font-semibold text-zinc-400">ابدأ الآن</p>
+            <p className="mt-4 text-sm font-light leading-relaxed text-zinc-500">
               افحص مؤشر نمو موقعك، أو احجز جلسة استراتيجية مباشرة.
             </p>
             <div className="mt-5 flex flex-col gap-3">

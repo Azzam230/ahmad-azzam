@@ -1,6 +1,10 @@
+"use client";
+
 import { ArrowLeft } from "lucide-react";
+import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/section-heading";
+import { cardMotionProps } from "@/components/motion";
 
 const ARTICLES = [
   {
@@ -51,28 +55,29 @@ export function Articles() {
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-200 shadow-card md:grid-cols-3">
           {ARTICLES.map((article) => (
-            <article
+            <motion.article
               key={article.title}
-              className="group flex flex-col bg-white p-6 transition-all duration-300 ease-in-out hover:bg-emerald-50/60 lg:p-8"
+              {...cardMotionProps}
+              className="group flex flex-col bg-white p-6 transition-colors duration-300 ease-in-out hover:bg-emerald-50/60 lg:p-8"
             >
               <Badge variant="emerald" className="self-start">
                 {article.category}
               </Badge>
-              <h3 className="mt-6 font-display text-xl font-bold leading-snug text-ink transition-all duration-300 ease-in-out group-hover:text-emerald-600">
+              <h3 className="mt-6 font-display text-xl font-semibold leading-snug text-ink transition-colors duration-300 ease-in-out group-hover:text-emerald-600">
                 {article.title}
               </h3>
-              <p className="mt-3 font-serif text-sm leading-relaxed text-zinc-500">
+              <p className="mt-3 font-serif text-sm font-light leading-relaxed text-zinc-500">
                 {article.excerpt}
               </p>
               <div className="mt-8 flex items-center justify-between border-t border-zinc-200 pt-4">
                 <span className="text-xs font-medium text-zinc-400">
                   {article.readTime}
                 </span>
-                <span className="text-xs font-bold text-zinc-300 transition-all duration-300 ease-in-out group-hover:text-emerald-600">
+                <span className="text-xs font-semibold text-zinc-300 transition-colors duration-300 ease-in-out group-hover:text-emerald-600">
                   اقرأ المقال
                 </span>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

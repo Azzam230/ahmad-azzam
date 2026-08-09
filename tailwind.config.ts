@@ -60,9 +60,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "var(--font-sans)", "serif"],
-        serif: ["var(--font-serif)", "var(--font-sans)", "serif"],
+        thmanyah: ["var(--font-thmanyah)", "system-ui", "sans-serif"],
+        sans: ["var(--font-thmanyah)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-thmanyah)", "serif"],
+        serif: ["var(--font-serif)", "var(--font-thmanyah)", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -9,6 +9,7 @@ import {
   type ReactNode,
   type FormEvent,
 } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Check, MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -199,24 +200,33 @@ export function BookingProvider({ children }: { children: ReactNode }) {
   return (
     <BookingContext.Provider value={{ openBooking }}>
       {children}
-      {open && (
-        <div
+      <AnimatePresence>
+        {open && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
           className="fixed inset-0 z-[100] flex items-end justify-center bg-ink/60 p-4 backdrop-blur-sm sm:items-center"
           onClick={close}
           role="dialog"
           aria-modal="true"
           aria-label="حجز جلسة استراتيجية للنمو الرقمي"
         >
-          <div
-            className="w-full max-w-lg animate-fade-up rounded-2xl border border-zinc-200 bg-white shadow-card"
+          <motion.div
+            initial={{ opacity: 0, y: 16, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 16, scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 260, damping: 24 }}
+            className="w-full max-w-lg rounded-2xl border border-zinc-200 bg-white shadow-card"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4 border-b border-zinc-100 p-6">
               <div>
-                <h2 className="font-display text-xl font-bold text-ink">
+                <h2 className="font-display text-xl font-black tracking-tight text-ink">
                   حجز جلسة استراتيجية للنمو الرقمي
                 </h2>
-                <p className="mt-1.5 text-sm leading-relaxed text-zinc-500">
+                <p className="mt-1.5 text-sm font-light leading-relaxed text-zinc-500">
                   ادخل بيانات مشروعك وسنتواصل معك لتحديد موعد الجلسة.
                 </p>
               </div>
@@ -230,9 +240,10 @@ export function BookingProvider({ children }: { children: ReactNode }) {
               </Button>
             </div>
             <BookingForm onDone={close} />
-          </div>
-        </div>
-      )}
+          </motion.div>
+        </motion.div>
+        )}
+      </AnimatePresence>
     </BookingContext.Provider>
   );
 }

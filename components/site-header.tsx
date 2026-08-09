@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { BookingTrigger } from "@/components/booking-trigger";
 
@@ -16,7 +17,12 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-background/85 backdrop-blur-md">
+    <motion.header
+      initial={{ y: -32, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 220, damping: 24 }}
+      className="sticky top-0 z-50 border-b border-zinc-200/80 bg-background/80 backdrop-blur-xl backdrop-saturate-150"
+    >
       <div className="container flex h-16 items-center justify-between gap-4">
         <a href="#top" className="flex items-center gap-3">
           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-ink text-sm font-bold text-white">
@@ -24,7 +30,7 @@ export function SiteHeader() {
           </span>
           <span className="flex flex-col leading-none">
             <span className="text-sm font-bold text-ink">أحمد عزام</span>
-            <span className="mt-1 text-[11px] font-medium text-zinc-500">
+            <span className="mt-1 text-[11px] font-light text-zinc-500">
               نمو رقمي وأنظمة ذكية
             </span>
           </span>
@@ -59,7 +65,12 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="border-t border-zinc-200 bg-white md:hidden">
+        <motion.nav
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
+          className="border-t border-zinc-200 bg-white md:hidden"
+        >
           <div className="container flex flex-col gap-1 py-4">
             {NAV_LINKS.map((link) => (
               <a
@@ -75,8 +86,8 @@ export function SiteHeader() {
               احجز استشارة
             </BookingTrigger>
           </div>
-        </nav>
+        </motion.nav>
       )}
-    </header>
+    </motion.header>
   );
 }

@@ -4,6 +4,16 @@ export const fontSans = localFont({
   src: [
     {
       path: "./thmanyah typeface/thmanyahsans/woff2/thmanyahsans-Light.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahsans/woff2/thmanyahsans-Light.woff2",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahsans/woff2/thmanyahsans-Light.woff2",
       weight: "300",
       style: "normal",
     },
@@ -19,7 +29,17 @@ export const fontSans = localFont({
     },
     {
       path: "./thmanyah typeface/thmanyahsans/woff2/thmanyahsans-Bold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahsans/woff2/thmanyahsans-Bold.woff2",
       weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahsans/woff2/thmanyahsans-Black.woff2",
+      weight: "800",
       style: "normal",
     },
     {
@@ -28,12 +48,22 @@ export const fontSans = localFont({
       style: "normal",
     },
   ],
-  variable: "--font-sans",
+  variable: "--font-thmanyah",
   display: "swap",
 });
 
 export const fontDisplay = localFont({
   src: [
+    {
+      path: "./thmanyah typeface/thmanyahserifdisplay/woff2/thmanyahserifdisplay-Light.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahserifdisplay/woff2/thmanyahserifdisplay-Light.woff2",
+      weight: "200",
+      style: "normal",
+    },
     {
       path: "./thmanyah typeface/thmanyahserifdisplay/woff2/thmanyahserifdisplay-Light.woff2",
       weight: "300",
@@ -51,7 +81,17 @@ export const fontDisplay = localFont({
     },
     {
       path: "./thmanyah typeface/thmanyahserifdisplay/woff2/thmanyahserifdisplay-Bold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahserifdisplay/woff2/thmanyahserifdisplay-Bold.woff2",
       weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahserifdisplay/woff2/thmanyahserifdisplay-Black.woff2",
+      weight: "800",
       style: "normal",
     },
     {
@@ -66,6 +106,16 @@ export const fontDisplay = localFont({
 
 export const fontSerif = localFont({
   src: [
+    {
+      path: "./thmanyah typeface/thmanyahseriftext/woff2/thmanyahseriftext-Light.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahseriftext/woff2/thmanyahseriftext-Light.woff2",
+      weight: "200",
+      style: "normal",
+    },
     {
       path: "./thmanyah typeface/thmanyahseriftext/woff2/thmanyahseriftext-Light.woff2",
       weight: "300",
@@ -83,7 +133,17 @@ export const fontSerif = localFont({
     },
     {
       path: "./thmanyah typeface/thmanyahseriftext/woff2/thmanyahseriftext-Bold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahseriftext/woff2/thmanyahseriftext-Bold.woff2",
       weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./thmanyah typeface/thmanyahseriftext/woff2/thmanyahseriftext-Black.woff2",
+      weight: "800",
       style: "normal",
     },
     {
