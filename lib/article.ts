@@ -8,11 +8,13 @@ export type ArticleBlock =
   | { type: "directAnswer"; text: string }
   | { type: "callout"; title?: string; text: string }
   | { type: "table"; caption?: string; headers: string[]; rows: string[][] }
-  | { type: "faq"; items: { q: string; a: string }[] };
+  | { type: "faq"; items: { q: string; a: string }[] }
+  | { type: "cta"; title: string; text?: string };
 
 export interface Article {
   slug: string;
   title: string;
+  seoTitle?: string;
   description: string;
   category: string;
   categorySlug: string;

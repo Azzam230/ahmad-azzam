@@ -5,6 +5,7 @@ import { DirectAnswer } from "@/components/blog/direct-answer";
 import { Callout } from "@/components/blog/callout";
 import { DataTable } from "@/components/blog/data-table";
 import { Faq } from "@/components/blog/faq";
+import { CtaCard } from "@/components/blog/cta-card";
 
 function Heading({
   level,
@@ -92,6 +93,8 @@ export function ArticleBlocks({ blocks }: { blocks: ArticleBlock[] }) {
             );
           case "faq":
             return <Faq key={index} items={block.items} />;
+          case "cta":
+            return <CtaCard key={index} title={block.title} text={block.text} />;
           default:
             return null;
         }

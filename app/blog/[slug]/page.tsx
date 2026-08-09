@@ -40,7 +40,7 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: article.title,
+    title: article.seoTitle ?? article.title,
     description: article.description,
     keywords: article.tags,
     category: article.category,
@@ -50,7 +50,7 @@ export async function generateMetadata({
       canonical: url,
     },
     openGraph: {
-      title: article.title,
+      title: article.seoTitle ?? article.title,
       description: article.description,
       type: "article",
       url,
@@ -71,7 +71,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
+      title: article.seoTitle ?? article.title,
       description: article.description,
       images: [imageUrl],
     },
