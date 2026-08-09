@@ -24,13 +24,15 @@ export function SiteHeader() {
       className="sticky top-0 z-50 border-b border-zinc-200/80 bg-background/80 backdrop-blur-xl backdrop-saturate-150"
     >
       <div className="container flex h-16 items-center justify-between gap-4">
-        <a href="#top" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-ink text-sm font-bold text-white">
-            ن
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="text-sm font-bold text-ink">أحمد عزام</span>
-            <span className="mt-1 text-[11px] font-light text-zinc-500">
+        <a
+          href="/"
+          className="flex shrink-0 items-center gap-3 transition-opacity duration-300 ease-in-out hover:opacity-80"
+        >
+          <span className="flex flex-col leading-tight">
+            <span className="font-display text-lg font-bold tracking-tight text-zinc-900 dark:text-white sm:text-xl">
+              أحمد عزام
+            </span>
+            <span className="mt-0.5 text-xs font-light text-zinc-500 dark:text-zinc-400">
               نمو رقمي وأنظمة ذكية
             </span>
           </span>
