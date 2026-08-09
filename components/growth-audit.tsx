@@ -183,9 +183,9 @@ export function GrowthAudit() {
   return (
     <section
       id="audit"
-      className="scroll-mt-16 border-b border-zinc-200 bg-ink text-white"
+      className="scroll-mt-16 w-full max-w-full overflow-hidden border-b border-zinc-200 bg-ink text-white"
     >
-      <div className="container py-20 lg:py-28">
+      <div className="container w-full max-w-full py-20 lg:py-28">
         <div className="flex items-center justify-between">
           <p className="text-xs font-light text-emerald-400">
             أداة تقييم الجاهزية الرقمية
@@ -210,7 +210,7 @@ export function GrowthAudit() {
           </p>
         </Reveal>
 
-        <div className="mt-12 overflow-hidden rounded-2xl border border-zinc-800 bg-[#111113]">
+        <div className="mt-12 w-full max-w-full overflow-hidden rounded-2xl border border-zinc-800 bg-[#111113]">
           <div className="flex items-center border-b border-zinc-800">
             {[...STEPS, { label: "النتيجة" }].map((s, i) => {
               const active = showResult ? i === 3 : i === step;
@@ -219,7 +219,7 @@ export function GrowthAudit() {
                 <div
                   key={s.label}
                   className={cn(
-                    "flex flex-1 items-center gap-3 border-e border-zinc-800 px-4 py-4 last:border-e-0",
+                    "flex min-w-0 flex-1 items-center gap-2 border-e border-zinc-800 px-2 py-4 sm:gap-3 sm:px-4 last:border-e-0",
                     active && "bg-emerald-600"
                   )}
                 >
@@ -249,7 +249,7 @@ export function GrowthAudit() {
           </div>
 
           {!showResult ? (
-            <div className="p-6 lg:p-10">
+            <div className="w-full min-w-0 px-4 py-6 sm:px-6 sm:py-8 lg:p-10">
               <p className="text-xs font-light text-zinc-500">
                 الخطوة {step + 1} من 3 — {STEPS[step].label}
               </p>
@@ -266,7 +266,7 @@ export function GrowthAudit() {
                       onClick={() => setGoal(g.id)}
                       {...cardMotionProps}
                       className={cn(
-                        "flex flex-col items-start gap-4 bg-[#111113] p-5 text-start transition-colors duration-300 ease-in-out",
+                        "flex w-full min-w-0 flex-col items-start gap-4 bg-[#111113] px-4 py-5 text-start transition-colors duration-300 ease-in-out sm:p-5",
                         goal === g.id && "bg-emerald-600 hover:bg-emerald-600"
                       )}
                     >
@@ -304,7 +304,7 @@ export function GrowthAudit() {
                       placeholder="https://example.com"
                       value={url}
                       onChange={(e) => setUrl(e.target.value)}
-                      className="mt-2 border-white/20 bg-[#111113] text-white placeholder:text-white/30 focus-visible:border-emerald-500 focus-visible:ring-emerald-500/20"
+                      className="mt-2 w-full min-w-0 box-border border-white/20 bg-[#111113] px-3 py-2.5 text-sm text-white placeholder:text-white/30 focus-visible:border-emerald-500 focus-visible:ring-emerald-500/20 sm:text-base"
                     />
                   </div>
                   <div>
@@ -319,7 +319,7 @@ export function GrowthAudit() {
                           onClick={() => setTraffic(t.id)}
                           {...cardMotionProps}
                           className={cn(
-                            "flex flex-col items-start gap-1 bg-[#111113] px-4 py-4 text-start transition-colors duration-300 ease-in-out",
+                            "flex w-full min-w-0 flex-col items-start gap-1 bg-[#111113] px-3 py-4 text-start transition-colors duration-300 ease-in-out sm:px-4",
                             traffic === t.id && "bg-emerald-600"
                           )}
                         >
@@ -345,7 +345,7 @@ export function GrowthAudit() {
                       onClick={() => setBottleneck(b.id)}
                       {...cardMotionProps}
                       className={cn(
-                        "flex flex-col items-start gap-2 bg-[#111113] px-5 py-5 text-start transition-colors duration-300 ease-in-out",
+                        "flex w-full min-w-0 flex-col items-start gap-2 bg-[#111113] px-4 py-5 text-start transition-colors duration-300 ease-in-out sm:px-5",
                         bottleneck === b.id && "bg-emerald-600"
                       )}
                     >
@@ -382,7 +382,7 @@ export function GrowthAudit() {
               </div>
             </div>
           ) : (
-            <div className="p-6 lg:p-10">
+            <div className="w-full min-w-0 px-4 py-6 sm:px-6 sm:py-8 lg:p-10">
               <div className="grid gap-10 lg:grid-cols-12">
                 <div className="lg:col-span-5">
                   <p className="text-xs font-light text-zinc-500">
@@ -397,9 +397,9 @@ export function GrowthAudit() {
                       / 100
                     </span>
                   </div>
-                  <div className="mt-6 h-1.5 w-full bg-white/10">
+                  <div className="mt-6 h-1.5 w-full min-w-0 bg-white/10">
                     <div
-                      className="h-full animate-grow bg-emerald-400"
+                      className="h-full max-w-full animate-grow bg-emerald-400"
                       style={
                         {
                           "--grow-to": `${analysis.score}%`,
@@ -427,22 +427,22 @@ export function GrowthAudit() {
                 </div>
 
                 <div className="lg:col-span-7">
-                  <div className="flex h-full flex-col justify-center gap-6 border-t border-zinc-800 pt-8 lg:border-e lg:border-t-0 lg:pe-8 lg:pt-0">
+                  <div className="flex h-full min-w-0 flex-col justify-center gap-6 border-t border-zinc-800 pt-8 lg:border-e lg:border-t-0 lg:pe-8 lg:pt-0">
                     {analysis.bars.map((bar) => (
-                      <div key={bar.label}>
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-medium text-zinc-200">
+                      <div key={bar.label} className="min-w-0">
+                        <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
+                          <span className="min-w-0 break-words font-medium text-zinc-200">
                             {bar.label}
                           </span>
-                          <span className="text-sm font-semibold text-white">
+                          <span className="shrink-0 font-semibold text-white">
                             {bar.value}
                             <span className="text-white/40">%</span>
                           </span>
                         </div>
-                        <div className="mt-2 h-1.5 w-full bg-white/10">
+                        <div className="mt-2 h-1.5 w-full min-w-0 bg-white/10">
                           <div
                             className={cn(
-                              "h-full animate-grow",
+                              "h-full max-w-full animate-grow",
                               bar.value === analysis.weakest.value
                                 ? "bg-zinc-400"
                                 : "bg-emerald-400"
@@ -493,7 +493,7 @@ export function GrowthAudit() {
                             value={fullName}
                             onChange={(e) => setFullName(e.target.value)}
                             className={cn(
-                              "mt-2 border-white/20 bg-[#111113] text-white placeholder:text-white/30 focus-visible:border-emerald-500 focus-visible:ring-emerald-500/20",
+                              "mt-2 w-full min-w-0 box-border border-white/20 bg-[#111113] px-3 py-2.5 text-sm text-white placeholder:text-white/30 focus-visible:border-emerald-500 focus-visible:ring-emerald-500/20 sm:text-base",
                               errors.fullName &&
                                 "border-red-500 focus-visible:border-red-500 focus-visible:ring-red-500/20"
                             )}
@@ -519,7 +519,7 @@ export function GrowthAudit() {
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                             className={cn(
-                              "mt-2 border-white/20 bg-[#111113] text-white placeholder:text-white/30 focus-visible:border-emerald-500 focus-visible:ring-emerald-500/20",
+                              "mt-2 w-full min-w-0 box-border border-white/20 bg-[#111113] px-3 py-2.5 text-sm text-white placeholder:text-white/30 focus-visible:border-emerald-500 focus-visible:ring-emerald-500/20 sm:text-base",
                               errors.phone &&
                                 "border-red-500 focus-visible:border-red-500 focus-visible:ring-red-500/20"
                             )}
@@ -533,11 +533,10 @@ export function GrowthAudit() {
                       </div>
                       <Button
                         type="submit"
-                        size="lg"
-                        className="w-full sm:w-auto"
+                        className="h-auto w-full whitespace-normal rounded-xl px-3 py-3.5 text-center text-xs font-semibold leading-relaxed sm:w-auto sm:px-6 sm:py-3 sm:text-sm"
                       >
-                        <MessageCircle />
-                        احصل على التحليل الكامل + احجز جلسة استراتيجية عبر الواتساب
+                        <MessageCircle className="shrink-0" />
+                        <span>احصل على التحليل الكامل + احجز جلسة استراتيجية عبر الواتساب</span>
                       </Button>
                       {sent && (
                         <p className="text-sm font-light text-emerald-400">
