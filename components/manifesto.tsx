@@ -2,16 +2,15 @@ import { Check, X } from "lucide-react";
 import { Reveal } from "@/components/motion";
 
 const TRADITIONAL = [
-  "خدمات منفصلة بلا استراتيجية موحدة",
-  "مسوّق يركز على المشاهدات لا على المبيعات",
-  "مبرمج يبني واجهات ولا يفهم أهداف الربح",
+  "موقع شكل بدون مبيعات.",
+  "إعلانات مكلفة بدون متابعة حقيقية للعملاء.",
+  "تشتت بين المطور والمسوق.",
 ];
 
 const GROWTH_SYSTEM = [
-  "استراتيجية موحدة تربط التقنية بالبيع",
-  "واجهات عالية التحويل مبنية للنتيجة",
-  "أتمتة بالذكاء الاصطناعي للتشغيل والمتابعة",
-  "تصدر محركات البحث والـ AI — SEO/GEO",
+  "واجهات عالية التحويل تقنع الزائر فوراً.",
+  "أتمتة الرد والمتابعة عبر الواتساب فور تسجيل العميل.",
+  "استراتيجية موحدة تربط التقنية بالمبيعات مباشرة.",
 ];
 
 export function Manifesto() {
@@ -32,8 +31,8 @@ export function Manifesto() {
 
         <Reveal>
           <h2 className="mt-6 max-w-4xl text-balance font-display text-3xl font-black leading-snug tracking-tight sm:text-4xl lg:text-5xl">
-            نموّ حقيقي لا يصنعه وعدٌ، بل{" "}
-            <span className="text-emerald-400">منظومة رقمية تفي</span>.
+            لماذا تخسر معظم الشركات{" "}
+            <span className="text-emerald-400">ميزانيتها الرقمية؟</span>
           </h2>
         </Reveal>
 
@@ -63,7 +62,7 @@ export function Manifesto() {
           <div className="bg-emerald-600 p-8 lg:p-10">
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold text-emerald-100">
-                منظومة النمو
+                نظام النمو الذكي
               </span>
               <span className="flex h-6 w-6 items-center justify-center rounded-full border border-emerald-300/60 text-emerald-100">
                 <Check className="h-3.5 w-3.5" />

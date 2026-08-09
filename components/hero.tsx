@@ -28,16 +28,17 @@ export function Hero() {
 
           <Reveal delay={0.1}>
             <h1 className="mt-7 text-balance font-display text-4xl font-black leading-[1.2] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem] lg:leading-[1.15]">
-              نحوّل التسويق، التقنية، والذكاء الاصطناعي إلى{" "}
-              <span className="text-emerald-600">محرك نمو أوتوماتيكي</span>{" "}
-              للشركات.
+              نصمّم موقعك ونربط مبيعاتك بالذكاء الاصطناعي... ليجلب لك{" "}
+              <span className="text-emerald-600">عملاء حقيقيين</span> بدلاً من
+              المصاريف الفارغة.
             </h1>
           </Reveal>
 
           <Reveal delay={0.2}>
             <p className="mt-7 max-w-xl text-lg font-light leading-relaxed text-zinc-600">
-              توقف عن التشتت بين المطورين والمسوّقين. ابْنِ منظومة رقمية متكاملة
-              يخدم فيها الموقع والذكاء الاصطناعي أهداف المبيعات مباشرة.
+              بدلاً من الضياع بين مبرمج لا يفهم المبيعات ومسوق يجمع لك
+              المشاهدات فقط؛ نبني لك نظاماً رقمياً متكاملاً من الواجهة حتى إغلاق
+              الصفقة.
             </p>
           </Reveal>
 

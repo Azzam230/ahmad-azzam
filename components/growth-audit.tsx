@@ -201,8 +201,8 @@ export function GrowthAudit() {
               فحص مجاني لمؤشر نمو موقعك
             </h2>
             <p className="mt-4 max-w-2xl font-light leading-relaxed text-zinc-300">
-              ثلاث خطوات فقط، ثم تحصل على مؤشر أولي لجاهزية منظومتك الرقمية مع
-              توصية عملية بأهم نقطة تحسين.
+              أجب عن 3 أسئلة سريعة للتعرف على الفجوة التي تمنع موقعك من زيادة
+              المبيعات.
             </p>
           </div>
           <p className="shrink-0 text-xs font-light text-zinc-400">

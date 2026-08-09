@@ -7,32 +7,32 @@ import { cardMotionProps } from "@/components/motion";
 
 const SYSTEMS = [
   {
-    icon: Filter,
-    title: "هندسة استراتيجيات المبيعات",
-    subtitle: "Funnel Architecture",
-    description:
-      "مسار عميل مدروس يحوّل الزائر إلى مشترٍ، ويضاعف معدل التحويل عند كل مرحلة من مراحل القرار.",
-  },
-  {
     icon: MousePointerClick,
-    title: "الواجهات عالية التحويل",
-    subtitle: "High-Conversion UX & Web",
+    title: "واجهات تجلب المبيعات",
+    subtitle: "High-Conversion Web",
     description:
-      "مواقع سريعة ببنية حديثة وواجهات مبنية للنتيجة، لا للشكل فقط — لكل عنصر سبب في البيع.",
+      "تصميم مواقع سريعة وسهلة تُحوّل الزوار إلى عملاء فعليين.",
   },
   {
     icon: TrendingUp,
-    title: "تصدر محركات البحث والـ AI",
-    subtitle: "SEO & GEO",
+    title: "التصدر في Google والذكاء الاصطناعي",
+    subtitle: "SEO & AI Search",
     description:
-      "الظهور المباشر في Google و ChatGPT و Perplexity حيث يبحث عميلك اليوم عن حلّه فعلياً.",
+      "الظهور المباشر عندما يبحث العميل عن خدمتك في Search أو ChatGPT.",
   },
   {
     icon: Bot,
-    title: "أتمتة العمليات بالذكاء الاصطناعي",
-    subtitle: "AI Automation",
+    title: "أتمتة المتابعة والواتساب",
+    subtitle: "WhatsApp Automation",
     description:
-      "ربط الأنظمة ومتابعة العملاء آلياً، لتشتغل أعمالك على مدار الساعة بلا تشغيل يدوي.",
+      "رد أوتوماتيكي ومتابعة فورية للعملاء دون الحاجة لتدخل يدوي مستمر.",
+  },
+  {
+    icon: Filter,
+    title: "استراتيجية النمو الرقمي",
+    subtitle: "Growth Strategy",
+    description:
+      "خطة عمل واضحة تحدّد مسار العميل وتضاعف عائد الاستثمار.",
   },
 ];
 
