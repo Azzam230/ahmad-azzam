@@ -138,6 +138,19 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </p>
             </div>
 
+            {article.featuredImage && (
+              <div className="mt-10">
+                <img
+                  src={article.featuredImage}
+                  alt={article.title}
+                  width={1920}
+                  height={1080}
+                  loading="eager"
+                  className="h-auto w-full max-w-4xl rounded-2xl border border-zinc-200 shadow-card"
+                />
+              </div>
+            )}
+
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
               <div className="flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-ink text-sm font-black text-white">

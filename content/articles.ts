@@ -11,6 +11,7 @@ export const articles: Article[] = [
     category: "النمو الرقمي",
     categorySlug: "growth",
     tags: ["تكلفة الموقع", "WordPress", "ووردبريس", "برمجة خاصة", "التكلفة"],
+    featuredImage: "/blog/website-development-costs-guide.jpg",
     publishDate: "2026-08-09",
     modifiedDate: "2026-08-09",
     readMinutes: 9,
